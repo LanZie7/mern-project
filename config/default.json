@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret": "lana-mern-project-app",
+    "mongoUri": "mongodb://127.0.0.1:27017/"
+}
