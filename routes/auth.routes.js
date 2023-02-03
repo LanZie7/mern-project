@@ -1,8 +1,8 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('config')
-const {check, validationResult} = require('express-validator')
+const { check, validationResult } = require('express-validator')
 const User = require('../models/User')
 const router = Router()
 
@@ -15,7 +15,7 @@ router.post(
         check('password', 'Minimum password length is 6 characters').isLength({ min: 6 }),
     ],
     async (req, res) => {
-        console.log('Body', req.body);
+        // console.log('Body', req.body);
     try {
         // express-validator валидирует входящие поля
         const errors = validationResult(req)
@@ -73,7 +73,7 @@ router.post(
 
         const {email, password} = req.body
 
-        const user = await user.findOne({ email })
+        const user = await User.findOne({ email })
 
         if(!user) {
             return res.status(400).json({ message: 'User is not found' })
