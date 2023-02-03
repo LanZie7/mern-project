@@ -15,6 +15,7 @@ router.post(
         check('password', 'Minimum password length is 6 characters').isLength({ min: 6 }),
     ],
     async (req, res) => {
+        console.log('Body', req.body);
     try {
         // express-validator валидирует входящие поля
         const errors = validationResult(req)

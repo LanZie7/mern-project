@@ -1,5 +1,5 @@
 import React from "react"
-import {Route, Switch, Redirect} from "react-router-dom"
+import { Route, Switch, Redirect } from "react-router-dom"
 import { AuthPage } from "./pages/AuthPage"
 import { CreatePage } from "./pages/CreatePage"
 import { DetailPage } from "./pages/DetailPage"
