@@ -11,9 +11,11 @@ export const useHttp = () => {
                 body = JSON.stringify(body)
                 headers['Content-Type'] = 'application/json'
             }
+            console.log(url, body, headers);
+
             const response = await fetch(url, {method, body, headers})
             const data = await response.json()
-            if(data.ok) {
+            if(!response.ok) {
                 throw new Error(data.message || 'Something wrong')
             }
 
