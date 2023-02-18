@@ -1,12 +1,6 @@
 import React  from 'react'
-import { useParams } from 'react-router-dom'
-import { Loader } from '../components/Loader'
-import { AuthContext } from '../context/AuthContext'
-import { useHttp } from '../hooks/http.hook'
 
 export const LinkCard = ({ link }) => {
-    
-    
     return (
         <>
             <h2>Link</h2>
